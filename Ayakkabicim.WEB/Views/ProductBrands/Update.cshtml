@@ -1,0 +1,86 @@
+﻿@{
+    ViewData["Title"] = "Update";
+}
+@model ProductBrandsDto
+
+<div class="col-lg-12">
+    <div class="card">
+        <div class="card-body">
+            <form asp-controller="ProductBrands" asp-action="Update" method="post" class="needs-validation" novalidate>
+                <h4 class="card-title">Ürün Güncelle</h4>
+                <input type="hidden" asp-for="Id" id="ProductBarandsIdUpdate">
+
+                <div class="mb-3 row">
+                    <label class="form-label" asp-for="ProductBrandsId">Kayıtlı Markalar</label>
+                    <select class="form-control select2" asp-for="ProductBrandsId" asp-items="ViewBag.brands" id="ProductBrandsIdUpdate"></select>
+                    <span asp-validation-for="ProductBrandsId" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3 row">
+                    <label asp-for="BrandsName" class="col-md-2 col-form-label">BrandsName </label>
+                    <div class="col-md-6">
+                        <input id="ProductBrandsNameUpdate" asp-for="BrandsName" type="text" class="form-control" placeholder="Marka Giriniz" required>
+                        <div class="invalid-feedback">Marka Adı Boş olamaz!</div>
+                    </div>
+                </div>s
+
+
+                <div class="mb-3 row">
+                    <label asp-for="BrandsCode" class="col-md-2 col-form-label">Marka Kodu</label>
+                    <div class="col-md-6">
+                        <input id="ProductBrandsCodeUpdate" asp-for="BrandsCode" type="text" class="form-control" placeholder="Marka Kodu Giriniz" required>
+                        <div class="invalid-feedback">Marka Kodu Boş olamaz!</div>
+                    </div>
+                </div>
+
+                <div class="mb-3 row">
+                    <label asp-for="BrandsWebUrl" class="col-md-2 col-form-label">BrandsWebUrl</label>
+                    <div class="col-md-6">
+                        <input id="ProductBrandsWebUrlUpdate" asp-for="BrandsWebUrl" type="text" class="form-control" placeholder="Brands Web Url Giriniz" required>
+                        <div class="invalid-feedback">Brands Web Url Boş olamaz!</div>
+                    </div>
+                </div>
+
+
+                <div class="mb-3 row">
+                    <label asp-for="LogoFileName" class="col-md-2 col-form-label">LogoFileName </label>
+                    <div class="col-md-6">
+                        <input id="ProductBrandsLogoFileNameUpdate" asp-for="LogoFileName" type="text" class="form-control" placeholder="LogoFileName Yazınız" required>
+                        <div class="invalid-feedback">LogoFileName Boş olamaz!</div>
+                    </div>
+                </div>
+
+                <div class="mb-3 row">
+                    <label asp-for="LogoFilePath" class="col-md-2 col-form-label">LogoFilePath </label>
+                    <div class="col-md-6">
+                        <input id="ProductBrandsLogoFilePathUpdate" asp-for="LogoFilePath" type="text" class="form-control" placeholder="LogoFilePath Yazınız" required>
+                        <div class="invalid-feedback">LogoFilePath Boş olamaz!</div>
+                    </div>
+                </div>
+                <div class="mb-3 row">
+                    <label asp-for="LogoBase64Content" class="col-md-2 col-form-label">LogoBase64Content </label>
+                    <div class="col-md-6">
+                        <input id="ProductBrandsLogoBase64ContentUpdate" asp-for="LogoBase64Content" type="text" class="form-control" placeholder="LogoBase64Content Yazınız" required>
+                        <div class="invalid-feedback">LogoBase64Content Boş olamaz!</div>
+                    </div>
+                </div>
+
+                <div class="mb-3 row">
+                    <label asp-for="Explanation" class="col-md-2 col-form-label">Açıklama</label>
+                    <div class="col-md-6">
+                        <textarea id="elm1" asp-for="Explanation" class="form-control"></textarea>
+
+                    </div>
+                </div>
+
+
+
+                <input type="submit" value="Update" class="btn btn-primary waves-effect waves-light me-1 form-group" />
+
+            </form>
+
+
+        </div>
+    </div>
+</div>
+

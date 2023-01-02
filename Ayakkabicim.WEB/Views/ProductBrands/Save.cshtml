@@ -1,0 +1,96 @@
+﻿@{
+    ViewData["Title"] = "Save";
+}
+@model ProductBrandsDto
+
+
+
+
+<div class="col-lg-12">
+    <div class="card">
+        <div class="card-body">
+            <form asp-controller="ProductBrands" asp-action="Save" method="post" class="needs-validation" novalidate>
+                <h4 class="card-title">Marka Kayıt</h4>
+                <div class="col-md-6">
+                <div class="mb-3 row">
+                        <label class="form-label" asp-for="ProductBrandsId">Kayıtlı Markalar</label>
+                        <select class="form-control select2" asp-for="ProductBrandsId" asp-items="ViewBag.brands" id="ProductBrandsIdSave"></select>
+                        <span asp-validation-for="ProductBrandsId" class="text-danger"></span>
+                  </div>
+               
+
+
+                <div class="mb-3 row">
+                    <label asp-for="BrandsName" class="col-md-2 col-form-label">BrandsName </label>
+                    <div class="col-md-6">
+                        <input id="ProductBrandsNameSave" asp-for="BrandsName" type="text" class="form-control" placeholder="Marka Giriniz" required>
+                        <div class="invalid-feedback">Marka Adı Boş olamaz!</div>
+                    </div>
+                </div>
+             
+
+                <div class="mb-3 row">
+                    <label asp-for="BrandsCode" class="col-md-2 col-form-label">Marka Kodu</label>
+                    <div class="col-md-6">
+                        <input id="ProductBrandsCodeSave" asp-for="BrandsCode" type="text" class="form-control" placeholder="Marka Kodu Giriniz" required>
+                        <div class="invalid-feedback">Marka Kodu Boş olamaz!</div>
+                    </div>
+                </div>
+
+                <div class="mb-3 row">
+                    <label asp-for="BrandsWebUrl" class="col-md-2 col-form-label">BrandsWebUrl</label>
+                    <div class="col-md-6">
+                        <input id="ProductBrandsWebUrlSave" asp-for="BrandsWebUrl" type="text" class="form-control" placeholder="Brands Web Url Giriniz" required>
+                        <div class="invalid-feedback">Brands Web Url Boş olamaz!</div>
+                    </div>
+                </div>
+
+
+                <div class="mb-3 row">
+                    <label asp-for="LogoFileName" class="col-md-2 col-form-label">LogoFileName </label>
+                    <div class="col-md-6">
+                        <input id="ProductBrandsLogoFileNameSave" asp-for="LogoFileName" type="text" class="form-control" placeholder="LogoFileName Yazınız" required>
+                        <div class="invalid-feedback">LogoFileName Boş olamaz!</div>
+                    </div>
+                </div>
+
+                <div class="mb-3 row">
+                    <label asp-for="LogoFilePath" class="col-md-2 col-form-label">LogoFilePath </label>
+                    <div class="col-md-6">
+                        <input id="ProductBrandsLogoFilePathSave" asp-for="LogoFilePath" type="text" class="form-control" placeholder="LogoFilePath Yazınız" required>
+                        <div class="invalid-feedback">LogoFilePath Boş olamaz!</div>
+                    </div>
+                </div>
+                <div class="mb-3 row">
+                    <label asp-for="LogoBase64Content" class="col-md-2 col-form-label">LogoBase64Content </label>
+                    <div class="col-md-6">
+                        <input id="ProductBrandsLogoBase64ContentSave" asp-for="LogoBase64Content" type="text" class="form-control" placeholder="LogoBase64Content Yazınız" required>
+                        <div class="invalid-feedback">LogoBase64Content Boş olamaz!</div>
+                    </div>
+                </div>
+
+                <div class="mb-3 row">
+                    <label asp-for="Explanation" class="col-md-2 col-form-label">Açıklama</label>
+                    <div class="col-md-6">
+                        <textarea id="elm1" asp-for="Explanation" class="form-control"></textarea>
+
+                    </div>
+                </div>
+                
+          
+                <input type="submit"  class="btn btn-primary waves-effect waves-light me-1 form-group" />
+
+
+                </div>
+
+            </form>
+
+
+        </div>
+    </div>
+</div>
+              
+
+
+
+

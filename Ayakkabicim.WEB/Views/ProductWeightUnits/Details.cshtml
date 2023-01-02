@@ -1,0 +1,42 @@
+﻿@{
+    ViewData["Title"] = "Details";
+}
+@model ProductWeightUnitsDto
+
+<div class="col-lg-12">
+    <div class="card">
+        <div class="card-body">
+           
+                <h4 class="card-title">Ağırlık Birimleri</h4>
+                <input type="hidden" asp-for="Id" id="ProductWeightUnitsIdDetails">
+
+            <div class="mb-3 row">
+                <label asp-for="Name" class="col-md-2 col-form-label" for="ProductWeighUnitsNameSave">Ağırlık Birimi</label>
+                <div class="col-md-6">
+                    <input id="ProductWeightUnitsNameDetails" asp-for="Name" type="text" class="form-control" placeholder="Ağırlık Birimini Yazınız" disabled>
+                    <div class="invalid-feedback">Ağırlık Birimi Boş olamaz!</div>
+                </div>
+            </div>
+
+            <div class="mb-3 row">
+                <label asp-for="ShortCode" class="col-md-2 col-form-label">Ağırlık Birim Kodu</label>
+                <div class="col-md-6">
+                    <input id="ProductWeightUnitsCodeDetails" asp-for="ShortCode" type="text" class="form-control" placeholder="Ağırlık Birim Kodunu Yazınız" disabled>
+                    <div class="invalid-feedback">Ağırlık Birim Kodu Boş olamaz!</div>
+                </div>
+            </div>
+
+
+            <div class="mb-3 row">
+                <label asp-for="Explanation" class="col-md-2 col-form-label" disabled>Açıklama</label>
+                <div class="col-md-6">
+                    <textarea id="elm1" asp-for="Explanation" class="form-control"></textarea>
+
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+

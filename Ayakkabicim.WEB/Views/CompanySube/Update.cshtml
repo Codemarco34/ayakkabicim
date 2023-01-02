@@ -1,0 +1,126 @@
+﻿@{
+    ViewData["Title"] = "Update";
+}
+@model CompanySubeDto
+
+<div class="col-lg-12">
+    <div class="card">
+        <div class="card-body">
+            <form asp-controller="CompanySube" asp-action="Update" method="post" class="needs-validation" novalidate>
+                <h4 class="card-title">Sube Güncelle</h4>
+
+                <div class="mb-3 row">
+                    <label class="col-md-2 col-form-labe" asp-for="FirmaId">Kayıtlı Firmalar</label>
+                    <div class="col-md-6">
+                        <select class="form-control select2" asp-for="FirmaId" asp-items="ViewBag.firma" id="CompanyFirmaIdUpdate"></select>
+                        <span asp-validation-for="FirmaId" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="mb-3 row">
+                    <label asp-for="Name" class="col-md-2 col-form-label">Sube Name </label>
+                    <div class="col-md-6">
+                        <input id="CompanySubeNameUpdate" asp-for="Name" type="text" class="form-control" placeholder="Sube Giriniz" required>
+                        <div class="invalid-feedback">Sube Adı Boş olamaz!</div>
+                    </div>
+                </div>
+
+                <div class="mb-3 row">
+                    <label asp-for="Adress" class="col-md-2 col-form-label">Sube Adresi</label>
+                    <div class="col-md-6">
+                        <input id="CompanySubeAdressUpdate" asp-for="Adress" type="text" class="form-control" placeholder="Sube Adresi Giriniz" required>
+                        <div class="invalid-feedback">Sube Adresi Boş olamaz!</div>
+                    </div>
+                </div>
+
+                <div class="mb-3 row">
+                    <label asp-for="PhoneNumber" class="col-md-2 col-form-label">Telefon Numarası</label>
+                    <div class="col-md-6">
+                        <input id="CompanySubePhoneNumberUpdate" asp-for="PhoneNumber" type="text" class="form-control" placeholder="Telefon NUmarası Giriniz" required>
+                        <div class="invalid-feedback">Telefon Numarası Boş olamaz!</div>
+                    </div>
+                </div>
+
+                <div class="mb-3 row">
+                    <label asp-for="FaxNumber" class="col-md-2 col-form-label">Fax Numarası</label>
+                    <div class="col-md-6">
+                        <input id="CompanySubeFaxNumberUpdate" asp-for="FaxNumber" type="text" class="form-control" placeholder="Fax Numarası Giriniz" required>
+                        <div class="invalid-feedback">Fax Numarası Boş olamaz!</div>
+                    </div>
+                </div>
+
+                <div class="mb-3 row">
+                    <label asp-for="WebUrl" class="col-md-2 col-form-label">Web Url</label>
+                    <div class="col-md-6">
+                        <input id="CompanySubeWebUrlUpdate" asp-for="WebUrl" type="text" class="form-control" placeholder="Web Adresi Giriniz" required>
+
+                    </div>
+                </div>
+
+                <div class="mb-3 row">
+                    <label asp-for="TaxAdministration" class="col-md-2 col-form-label">Vergi Dairesi</label>
+                    <div class="col-md-6">
+                        <input id="CompanySubeTaxAdministrationUpdate" asp-for="TaxAdministration" type="text" class="form-control" placeholder="Vergi Dairesi Giriniz" required>
+                        <div class="invalid-feedback">Vergi Dairesi Boş olamaz!</div>
+                    </div>
+                </div>
+
+                <div class="mb-3 row">
+                    <label asp-for="TaxNumber" class="col-md-2 col-form-label">Vergi Numarası</label>
+                    <div class="col-md-6">
+                        <input id="CompanySubeTaxNumberUpdate" asp-for="TaxNumber" type="text" class="form-control" placeholder="Vergi Numarası Giriniz" required>
+                        <div class="invalid-feedback">Vergi Numarası Boş olamaz!</div>
+                    </div>
+                </div>
+
+                <div class="mb-3 row">
+                    <label asp-for="EPosta" class="col-md-2 col-form-label">E-Posta</label>
+                    <div class="col-md-6">
+                        <input id="CompanySubeEPostaUpdate" asp-for="EPosta" type="text" class="form-control" placeholder="E-Posta Giriniz" required>
+                        <div class="invalid-feedback">E-Posta Boş olamaz!</div>
+                    </div>
+                </div>
+
+                <div class="mb-3 row">
+                    <label asp-for="InvoiceAdress" class="col-md-2 col-form-label">Fatura Adresi</label>
+                    <div class="col-md-6">
+                        <input id="CompanyInvoiceAdressUpdate" asp-for="InvoiceAdress" type="text" class="form-control" placeholder="Fatura Adresi Giriniz" required>
+                        <div class="invalid-feedback">Fatura Adresi Boş olamaz!</div>
+                    </div>
+                </div>
+
+                <div class="mb-3 row">
+                    <label asp-for="EInvoice" class="col-md-2 col-form-label">E-Fatura</label>
+                    <div class="col-md-6">
+                        <input id="CompanyEInvoiceUpdate" asp-for="EInvoice" type="text" class="form-control" placeholder="E-Fatura Giriniz" required>
+                        <div class="invalid-feedback">E-Fatura Boş olamaz!</div>
+                    </div>
+                </div>
+
+                <div class="mb-3 row">
+                    <label asp-for="CompanyType" class="col-md-2 col-form-label">Sube Tipi</label>
+                    <div class="col-md-6">
+                        <input id="CompanyCompanyTypeUpdate" asp-for="CompanyType" type="text" class="form-control" placeholder="Sube Tipi Giriniz" required>
+                        <div class="invalid-feedback">Sube Tipi Boş olamaz!</div>
+                    </div>
+                </div>
+
+                <div class="mb-3 row">
+                    <label asp-for="Explanation" class="col-md-2 col-form-label">Açıklama</label>
+                    <div class="col-md-6">
+                        <textarea id="elm1" asp-for="Explanation" class="form-control"></textarea>
+
+                    </div>
+                </div>
+
+
+
+                <input type="submit" value="Update" class="btn btn-primary waves-effect waves-light me-1 form-group" />
+
+            </form>
+
+
+        </div>
+    </div>
+</div>
+

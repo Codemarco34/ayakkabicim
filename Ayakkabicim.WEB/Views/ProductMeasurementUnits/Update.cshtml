@@ -1,0 +1,52 @@
+﻿@{
+    ViewData["Title"] = "Update";
+}
+@model ProductMeasurementUnitsDto
+
+<div class="col-lg-12">
+    <div class="card">
+        <div class="card-body">
+            <form asp-controller="ProductMeasurementUnits" asp-action="Update" method="post" class="needs-validation" novalidate>
+                <h4 class="card-title">Ölçüm Birimi Güncelle</h4>
+                <input type="hidden" asp-for="Id" id="ProductMeasurementUnitsIdUpdate">
+
+                <div class="mb-3">
+                    <label class="form-label" asp-for="MeasurementId">Kayıtlı Birimler</label>
+                    <select class="form-control select2" asp-for="MeasurementId" asp-items="ViewBag.measurement" id="ProductMeasurementUnitsIdUpdate"></select>
+                    <span asp-validation-for="MeasurementId" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3 row">
+                    <label asp-for="Name" class="col-md-2 col-form-label" for="ProductMeasurementUnitsNameSave">Ölçüm Birimi/Değeri</label>
+                    <div class="col-md-6">
+                        <input id="ProductMeasurementUnitsNameSave" asp-for="Name" type="text" class="form-control" placeholder="Birim/Değer Yazınız" required>
+                        <div class="invalid-feedback">Ölçüm Birimi/Değeri Boş olamaz!</div>
+                    </div>
+                </div>
+
+                <div class="mb-3 row">
+                    <label asp-for="ShortCode" class="col-md-2 col-form-label">Birim/Değer</label>
+                    <div class="col-md-6">
+                        <input id="ProductMeasurementUnitsCodeUpdate" asp-for="ShortCode" type="text" class="form-control" placeholder="Birim/Değer Yazınız" required>
+                        <div class="invalid-feedback">Birim/Değer Boş olamaz!</div>
+                    </div>
+                </div>
+
+                <div class="mb-3 row">
+                    <label asp-for="Explanation" class="col-md-2 col-form-label">Açıklama</label>
+                    <div class="col-md-6">
+                        <textarea id="elm1" asp-for="Explanation" class="form-control"></textarea>
+
+                    </div>
+                </div>
+                
+
+                <input type="submit" value="Update" class="btn btn-primary waves-effect waves-light me-1 form-group" />
+
+            </form>
+
+
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,41 @@
+﻿@{
+    ViewData["Title"] = "Details";
+}
+@model ProductProjectDto
+
+<div class="col-lg-12">
+    <div class="card">
+        <div class="card-body">
+           
+                <h4 class="card-title">Projeler</h4>
+                <input type="hidden" asp-for="Id" id="ProductProjectIdDetails">
+
+            <div class="mb-3 row">
+                <label asp-for="Name" class="col-md-2 col-form-label" for="ProductProjectNameSave">Proje Adı</label>
+                <div class="col-md-6">
+                    <input id="ProductProjectsNameSave" asp-for="Name" type="text" class="form-control" placeholder="Proje Adını Yazınız" disabled>
+                    <div class="invalid-feedback">Proje Adı Boş olamaz!</div>
+                </div>
+            </div>
+
+            <div class="mb-3 row">
+                <label asp-for="ShortCode" class="col-md-2 col-form-label">Proje Kodu</label>
+                <div class="col-md-6">
+                    <input id="ProductProjectCodeDetails" asp-for="ShortCode" type="text" class="form-control" placeholder="Proje Kodunu Yazınız" disabled>
+                    <div class="invalid-feedback">Projec Kodu Boş olamaz!</div>
+                </div>
+            </div>
+
+            <div class="mb-3 row">
+                <label asp-for="Explanation" class="col-md-2 col-form-label" disabled>Açıklama</label>
+                <div class="col-md-6">
+                    <textarea id="elm1" asp-for="Explanation" class="form-control"></textarea>
+
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+

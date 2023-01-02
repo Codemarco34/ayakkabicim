@@ -1,0 +1,56 @@
+﻿@{
+    ViewData["Title"] = "Update";
+}
+@model ProductVatUnitsDto
+
+<div class="col-lg-12">
+    <div class="card">
+        <div class="card-body">
+            <form asp-controller="ProductVatUnits" asp-action="Update" method="post" class="needs-validation" novalidate>
+                <h4 class="card-title">Para Birimi Güncelle</h4>
+                <input type="hidden" asp-for="Id" id="ProductVatUnitsIdUpdate">
+
+                <div class="mb-3">
+                    <label class="form-label" asp-for="ProductVatId">Kayıtlı Kdv Oranları</label>
+                    <select class="form-control select2" asp-for="ProductVatId" asp-items="ViewBag.vat" id="ProductVatIdUpdate"></select>
+                    <span asp-validation-for="ProductVatId" class="text-danger"></span>
+                </div>
+
+
+                <div class="mb-3 row">
+                    <label asp-for="Name" class="col-md-2 col-form-label" for="ProductVatUnitsNameUpdate">Kdv Oranı</label>
+                    <div class="col-md-6">
+                        <input id="ProductVatUnitsNameUpdate" asp-for="Name" type="text" class="form-control" placeholder="Kdv Oranını Yazınız" required>
+                        <div class="invalid-feedback">Kdv Oranı Boş olamaz!</div>
+                    </div>
+                </div>
+
+                <div class="mb-3 row">
+                    <label asp-for="Code" class="col-md-2 col-form-label">Kdv Oran Kodu</label>
+                    <div class="col-md-6">
+                        <input id="ProductVatUnitsCodeUpdate" asp-for="Code" type="text" class="form-control" placeholder="Kdv Oran Kodunu Yazınız" required>
+                        <div class="invalid-feedback">Kdv Oran Kodu Boş olamaz!</div>
+                    </div>
+                </div>
+
+
+                <div class="mb-3 row">
+                    <label asp-for="Explanation" class="col-md-2 col-form-label">Açıklama</label>
+                    <div class="col-md-6">
+                        <textarea id="elm1" asp-for="Explanation" class="form-control"></textarea>
+
+                    </div>
+                </div>
+              
+
+                
+
+                <input type="submit" value="Update" class="btn btn-primary waves-effect waves-light me-1 form-group" />
+
+            </form>
+
+
+        </div>
+    </div>
+</div>
+

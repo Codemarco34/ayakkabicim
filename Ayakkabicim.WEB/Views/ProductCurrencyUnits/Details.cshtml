@@ -1,0 +1,41 @@
+﻿@{
+    ViewData["Title"] = "Details";
+}
+@model ProductCurrencyUnitsDto
+
+<div class="col-lg-12">
+    <div class="card">
+        <div class="card-body">
+           
+                <h4 class="card-title">Para Birimleri</h4>
+                <input type="hidden" asp-for="Id" id="ProductCurrencyUnitsIdUpdate">
+
+            <div class="mb-3 row">
+                <label asp-for="Name" class="col-md-2 col-form-label" for="ProductCurrencyUnitsNameSave">Para Birimi</label>
+                <div class="col-md-6">
+                    <input id="ProductCurrencyUnitsNameSave" asp-for="Name" type="text" class="form-control" placeholder="Para Birimi Yazınız" disabled>
+                    <div class="invalid-feedback">Para Birimi Boş olamaz!</div>
+                </div>
+            </div>
+
+            <div class="mb-3 row">
+                <label asp-for="ShortCode" class="col-md-2 col-form-label">Para Birim Kodu</label>
+                <div class="col-md-6">
+                    <input id="ProductCurrencyUnitsCodeUpdate" asp-for="ShortCode" type="text" class="form-control" placeholder="Para Birim Kodunu Yazınız" disabled>
+                    <div class="invalid-feedback">Para Birim Kodu Boş olamaz!</div>
+                </div>
+            </div>
+
+            <div class="mb-3 row">
+                <label asp-for="Explanation" class="col-md-2 col-form-label" disabled>Açıklama</label>
+                <div class="col-md-6">
+                    <textarea id="elm1" asp-for="Explanation" class="form-control"></textarea>
+
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
